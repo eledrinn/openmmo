@@ -1,0 +1,8 @@
+{
+  "id": "item_boundary_max_stack",
+  "name": "Max Stack Item",
+  "item_type": "material",
+  "stackable": true,
+  "max_stack_size": 9999,
+  "rarity": "common"
+}

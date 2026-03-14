@@ -1,0 +1,16 @@
+{
+  "id": "item_gold_ring",
+  "name": "Gold Ring",
+  "description": "A simple gold ring with a minor enchantment.",
+  "item_type": "equipment",
+  "icon": "ring_gold",
+  "stackable": false,
+  "rarity": "rare",
+  "equipment_slot": "ring",
+  "level_requirement": 15,
+  "stats": {
+    "intelligence": 5,
+    "vitality": 2
+  },
+  "sellable": true
+}

@@ -1,0 +1,9 @@
+{
+  "id": "reward_potion_drop",
+  "name": "Potion Drop",
+  "description": "A healing potion for adventurers in need.",
+  "items": [
+    { "item": "item_health_potion_small", "quantity": 1 }
+  ],
+  "reward_type": "loot"
+}

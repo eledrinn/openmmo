@@ -1,0 +1,12 @@
+{
+  "id": "reward_starter_kit",
+  "name": "Adventurer Starter Kit",
+  "description": "Basic equipment for new adventurers.",
+  "items": [
+    { "item": "item_iron_sword", "quantity": 1 },
+    { "item": "item_leather_armor", "quantity": 1 },
+    { "item": "item_wooden_shield", "quantity": 1 },
+    { "item": "item_health_potion_small", "quantity": 3 }
+  ],
+  "reward_type": "quest"
+}

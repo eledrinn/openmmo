@@ -1,0 +1,14 @@
+{
+  "name": "openmmo-cli",
+  "version": "0.1.0",
+  "description": "OpenMMO CLI — Wave 1 validate command",
+  "main": "src/validate.js",
+  "bin": {
+    "openmmo": "./bin/openmmo"
+  },
+  "scripts": {
+    "test": "node tests/cli.spec.js"
+  },
+  "keywords": ["openmmo", "cli", "validator"],
+  "license": "MIT"
+}

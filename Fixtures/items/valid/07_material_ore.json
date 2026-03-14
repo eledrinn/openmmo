@@ -1,0 +1,12 @@
+{
+  "id": "item_iron_ore",
+  "name": "Iron Ore",
+  "description": "Raw iron ore ready for smelting. Commonly found in mines.",
+  "item_type": "material",
+  "icon": "ore_iron",
+  "stackable": true,
+  "max_stack_size": 99,
+  "rarity": "common",
+  "sellable": true,
+  "tags": ["metal", "crafting", "ore"]
+}

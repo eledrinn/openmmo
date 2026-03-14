@@ -1,0 +1,7 @@
+{
+  "id": "reward_invalid_experience",
+  "name": "Invalid Experience",
+  "experience": [
+    { "experience_type": "mastery", "amount": 500 }
+  ]
+}

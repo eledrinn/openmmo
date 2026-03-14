@@ -1,0 +1,7 @@
+{
+  "id": "reward_zero_quantity",
+  "name": "Zero Quantity",
+  "items": [
+    { "item": "item_iron_sword", "quantity": 0 }
+  ]
+}

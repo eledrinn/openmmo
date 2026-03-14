@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "openmmo://schemas/item.schema.json",
+  "title": "OpenMMO Item",
+  "description": "Core item schema for OpenMMO - Wave 1 complete. Defines items: consumable, equipment, material, quest.",
+  "type": "object",
+  "required": ["id", "name", "item_type"],
+  "properties": {
+    "id": {
+      "$ref": "openmmo://schemas/id.schema.json",
+      "description": "Unique identifier for the item (item_* format)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name of the item",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the item",
+      "maxLength": 500
+    },
+    "item_type": {
+      "type": "string",
+      "description": "Category of the item",
+      "enum": ["consumable", "equipment", "material", "quest"]
+    },
+    "icon": {
+      "type": "string",
+      "description": "Icon identifier for UI rendering",
+      "maxLength": 64
+    },
+    "stackable": {
+      "type": "boolean",
+      "description": "Whether the item can be stacked in inventory",
+      "default": false
+    },
+    "max_stack_size": {
+      "type": "integer",
+      "description": "Maximum stack size if stackable",
+      "minimum": 1,
+      "maximum": 9999,
+      "default": 1
+    },
+    "rarity": {
+      "type": "string",
+      "description": "Item rarity tier",
+      "enum": ["common", "uncommon", "rare", "epic", "legendary"],
+      "default": "common"
+    },
+    "level_requirement": {
+      "type": "integer",
+      "description": "Minimum character level to use/equip",
+      "minimum": 1,
+      "maximum": 100
+    },
+    "equipment_slot": {
+      "type": "string",
+      "description": "Equipment slot (required if item_type is equipment)",
+      "enum": ["head", "chest", "legs", "feet", "hands", "main_hand", "off_hand", "neck", "ring", "trinket"]
+    },
+    "stats": {
+      "type": "object",
+      "description": "Stat modifiers provided by this item (primarily for equipment)",
+      "properties": {
+        "strength": { "type": "integer", "description": "Strength modifier" },
+        "dexterity": { "type": "integer", "description": "Dexterity modifier" },
+        "intelligence": { "type": "integer", "description": "Intelligence modifier" },
+        "vitality": { "type": "integer", "description": "Vitality modifier" },
+        "armor": { "type": "integer", "description": "Armor rating", "minimum": 0 },
+        "damage": { "type": "integer", "description": "Base damage for weapons", "minimum": 0 }
+      },
+      "additionalProperties": { "type": "integer" }
+    },
+    "on_use_reward": {
+      "$ref": "openmmo://schemas/reference.schema.json",
+      "description": "Reference to reward granted when item is used (consumables only)"
+    },
+    "quest_binding": {
+      "type": "boolean",
+      "description": "Whether item is bound to a quest (quest items)",
+      "default": false
+    },
+    "destroy_on_use": {
+      "type": "boolean",
+      "description": "Whether item is consumed/destroyed on use",
+      "default": false
+    },
+    "sellable": {
+      "type": "boolean",
+      "description": "Whether item can be sold to vendors",
+      "default": true
+    },
+    "tags": {
+      "type": "array",
+      "description": "Optional tags for categorization",
+      "items": { "type": "string", "maxLength": 32 },
+      "maxItems": 10
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "item_type": { "const": "equipment" } }
+      },
+      "then": {
+        "required": ["equipment_slot"]
+      }
+    },
+    {
+      "if": {
+        "properties": { "stackable": { "const": true } }
+      },
+      "then": {
+        "properties": {
+          "max_stack_size": { "minimum": 2 }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "id": "item_health_potion_small",
+      "name": "Small Health Potion",
+      "description": "Restores a small amount of health when consumed.",
+      "item_type": "consumable",
+      "icon": "potion_red_small",
+      "stackable": true,
+      "max_stack_size": 20,
+      "rarity": "common",
+      "on_use_reward": "reward_heal_small",
+      "destroy_on_use": true
+    },
+    {
+      "id": "item_iron_sword",
+      "name": "Iron Sword",
+      "description": "A sturdy sword forged from iron.",
+      "item_type": "equipment",
+      "icon": "sword_iron",
+      "stackable": false,
+      "rarity": "common",
+      "equipment_slot": "main_hand",
+      "level_requirement": 5,
+      "stats": {
+        "damage": 12,
+        "strength": 2
+      },
+      "sellable": true
+    }
+  ]
+}

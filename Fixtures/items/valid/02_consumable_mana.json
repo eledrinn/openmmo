@@ -1,0 +1,13 @@
+{
+  "id": "item_mana_potion_medium",
+  "name": "Medium Mana Potion",
+  "description": "Restores a moderate amount of mana.",
+  "item_type": "consumable",
+  "icon": "potion_blue_medium",
+  "stackable": true,
+  "max_stack_size": 10,
+  "rarity": "uncommon",
+  "on_use_reward": "reward_mana_medium",
+  "destroy_on_use": true,
+  "sellable": true
+}

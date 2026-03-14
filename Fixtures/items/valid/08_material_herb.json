@@ -1,0 +1,12 @@
+{
+  "id": "item_herb_healing",
+  "name": "Healing Herb",
+  "description": "A medicinal herb used in potion crafting.",
+  "item_type": "material",
+  "icon": "herb_green",
+  "stackable": true,
+  "max_stack_size": 50,
+  "rarity": "common",
+  "sellable": true,
+  "tags": ["herb", "crafting", "potion"]
+}

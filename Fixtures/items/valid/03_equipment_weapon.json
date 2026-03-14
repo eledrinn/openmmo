@@ -1,0 +1,17 @@
+{
+  "id": "item_iron_sword",
+  "name": "Iron Sword",
+  "description": "A sturdy sword forged from iron. A reliable weapon for beginning adventurers.",
+  "item_type": "equipment",
+  "icon": "sword_iron",
+  "stackable": false,
+  "rarity": "common",
+  "equipment_slot": "main_hand",
+  "level_requirement": 5,
+  "stats": {
+    "damage": 12,
+    "strength": 2
+  },
+  "sellable": true,
+  "tags": ["weapon", "melee"]
+}

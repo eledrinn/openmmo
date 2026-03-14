@@ -1,0 +1,16 @@
+{
+  "id": "item_leather_armor",
+  "name": "Leather Armor",
+  "description": "Basic armor made from toughened leather. Offers light protection.",
+  "item_type": "equipment",
+  "icon": "armor_leather",
+  "stackable": false,
+  "rarity": "common",
+  "equipment_slot": "chest",
+  "level_requirement": 1,
+  "stats": {
+    "armor": 15,
+    "vitality": 1
+  },
+  "sellable": true
+}

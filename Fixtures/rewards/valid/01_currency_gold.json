@@ -1,0 +1,10 @@
+{
+  "id": "reward_gold_small",
+  "name": "Small Gold Pouch",
+  "description": "A small pouch containing a modest amount of gold.",
+  "currency": [
+    { "currency_type": "gold", "amount": 50 }
+  ],
+  "reward_type": "loot",
+  "tags": ["gold", "small"]
+}

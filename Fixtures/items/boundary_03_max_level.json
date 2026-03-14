@@ -1,0 +1,11 @@
+{
+  "id": "item_boundary_max_level",
+  "name": "Max Level Item",
+  "item_type": "equipment",
+  "equipment_slot": "main_hand",
+  "level_requirement": 100,
+  "rarity": "legendary",
+  "stats": {
+    "damage": 999
+  }
+}

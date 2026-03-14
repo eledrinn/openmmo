@@ -1,0 +1,11 @@
+{
+  "name": "openmmo-validator",
+  "version": "0.1.0",
+  "description": "OpenMMO Wave 1 Schema Validator",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/validator.spec.js"
+  },
+  "keywords": ["openmmo", "validator", "schema"],
+  "license": "MIT"
+}

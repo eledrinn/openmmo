@@ -1,0 +1,15 @@
+{
+  "id": "item_wooden_shield",
+  "name": "Wooden Shield",
+  "description": "A basic wooden shield. Provides minimal protection.",
+  "item_type": "equipment",
+  "icon": "shield_wooden",
+  "stackable": false,
+  "rarity": "common",
+  "equipment_slot": "off_hand",
+  "level_requirement": 1,
+  "stats": {
+    "armor": 5
+  },
+  "sellable": true
+}

@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+/**
+ * OpenMMO CLI Entry Point
+ * 
+ * Usage: openmmo <command> [options]
+ * 
+ * Commands:
+ *   validate     Validate OpenMMO entities against schemas
+ */
+
+const { main } = require('../src/validate');
+
+const args = process.argv.slice(2);
+const exitCode = main(args);
+process.exit(exitCode);

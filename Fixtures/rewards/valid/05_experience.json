@@ -1,0 +1,12 @@
+{
+  "id": "reward_level_up",
+  "name": "Level Up Bonus",
+  "description": "Experience and currency awarded for gaining a level.",
+  "currency": [
+    { "currency_type": "gold", "amount": 100 }
+  ],
+  "experience": [
+    { "experience_type": "character", "amount": 500 }
+  ],
+  "reward_type": "achievement"
+}

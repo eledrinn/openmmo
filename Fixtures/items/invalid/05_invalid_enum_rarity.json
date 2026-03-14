@@ -1,0 +1,6 @@
+{
+  "id": "item_invalid_rarity",
+  "name": "Invalid Rarity",
+  "item_type": "material",
+  "rarity": "super_legendary"
+}

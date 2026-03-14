@@ -1,0 +1,18 @@
+{
+  "id": "reward_boss_drop",
+  "name": "Boss Drop",
+  "description": "Epic rewards from defeating a powerful boss.",
+  "items": [
+    { "item": "item_gold_ring", "quantity": 1 }
+  ],
+  "currency": [
+    { "currency_type": "gold", "amount": 1000 },
+    { "currency_type": "honor_points", "amount": 50 }
+  ],
+  "experience": [
+    { "experience_type": "character", "amount": 2000 },
+    { "experience_type": "skill", "amount": 500 }
+  ],
+  "reward_type": "loot",
+  "tags": ["boss", "epic"]
+}

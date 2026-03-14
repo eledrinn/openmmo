@@ -1,0 +1,7 @@
+{
+  "id": "reward_invalid_currency",
+  "name": "Invalid Currency",
+  "currency": [
+    { "currency_type": "gems", "amount": 100 }
+  ]
+}

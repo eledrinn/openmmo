@@ -1,0 +1,6 @@
+{
+  "id": "reward_extra_property",
+  "name": "Extra Property",
+  "currency": [{ "currency_type": "gold", "amount": 10 }],
+  "extra_field": "not_allowed"
+}

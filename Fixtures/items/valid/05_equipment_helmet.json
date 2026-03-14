@@ -1,0 +1,16 @@
+{
+  "id": "item_steel_helmet",
+  "name": "Steel Helmet",
+  "description": "A sturdy steel helmet that protects the head from blows.",
+  "item_type": "equipment",
+  "icon": "helmet_steel",
+  "stackable": false,
+  "rarity": "uncommon",
+  "equipment_slot": "head",
+  "level_requirement": 10,
+  "stats": {
+    "armor": 25,
+    "vitality": 3
+  },
+  "sellable": true
+}

@@ -1,0 +1,12 @@
+{
+  "id": "item_ancient_key",
+  "name": "Ancient Key",
+  "description": "A mysterious key found in the ruins. It hums with latent magic.",
+  "item_type": "quest",
+  "icon": "key_ancient",
+  "stackable": false,
+  "rarity": "epic",
+  "quest_binding": true,
+  "sellable": false,
+  "tags": ["quest", "key"]
+}

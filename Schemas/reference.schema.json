@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "openmmo://schemas/reference.schema.json",
+  "title": "OpenMMO Reference",
+  "description": "Reference to another OpenMMO entity. Value must be a valid ID per ID_FORMAT.md. Note: This validates ID format only. Target category validation and existence checking are T006 scope.",
+  "type": "string",
+  "pattern": "^[a-z][a-z0-9]{1,15}_[a-z][a-z0-9_]{0,46}$",
+  "minLength": 4,
+  "maxLength": 64,
+  "examples": [
+    "item_iron_sword_001",
+    "reward_daily_bonus",
+    "currency_gold"
+  ]
+}

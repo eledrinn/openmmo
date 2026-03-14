@@ -1,0 +1,14 @@
+{
+  "id": "item_health_potion_small",
+  "name": "Small Health Potion",
+  "description": "Restores a small amount of health when consumed.",
+  "item_type": "consumable",
+  "icon": "potion_red_small",
+  "stackable": true,
+  "max_stack_size": 20,
+  "rarity": "common",
+  "on_use_reward": "reward_heal_small",
+  "destroy_on_use": true,
+  "sellable": true,
+  "tags": ["consumable", "healing"]
+}

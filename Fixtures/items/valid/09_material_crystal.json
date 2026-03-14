@@ -1,0 +1,12 @@
+{
+  "id": "item_magic_crystal",
+  "name": "Magic Crystal",
+  "description": "A crystal infused with arcane energy. Used for enchantments.",
+  "item_type": "material",
+  "icon": "crystal_purple",
+  "stackable": true,
+  "max_stack_size": 20,
+  "rarity": "rare",
+  "sellable": true,
+  "tags": ["crystal", "magic", "enchanting"]
+}

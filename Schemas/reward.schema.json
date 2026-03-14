@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "openmmo://schemas/reward.schema.json",
+  "title": "OpenMMO Reward",
+  "description": "Core reward schema for OpenMMO - Wave 1. Defines rewards containing items, currency, and experience.",
+  "type": "object",
+  "required": ["id", "name"],
+  "properties": {
+    "id": {
+      "$ref": "openmmo://schemas/id.schema.json",
+      "description": "Unique reward identifier (reward_* format)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name of the reward",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the reward",
+      "maxLength": 500
+    },
+    "items": {
+      "type": "array",
+      "description": "List of item rewards",
+      "items": {
+        "type": "object",
+        "required": ["item", "quantity"],
+        "properties": {
+          "item": {
+            "$ref": "openmmo://schemas/reference.schema.json",
+            "description": "Reference to item entity (item_*)"
+          },
+          "quantity": {
+            "type": "integer",
+            "description": "Number of items to award",
+            "minimum": 1,
+            "maximum": 9999,
+            "default": 1
+          }
+        },
+        "additionalProperties": false
+      },
+      "maxItems": 10
+    },
+    "currency": {
+      "type": "array",
+      "description": "List of currency rewards",
+      "items": {
+        "type": "object",
+        "required": ["currency_type", "amount"],
+        "properties": {
+          "currency_type": {
+            "type": "string",
+            "description": "Currency identifier",
+            "enum": ["gold", "premium", "honor_points", "reputation"]
+          },
+          "amount": {
+            "type": "integer",
+            "description": "Amount of currency to award",
+            "minimum": 1,
+            "maximum": 999999999
+          }
+        },
+        "additionalProperties": false
+      },
+      "maxItems": 5
+    },
+    "experience": {
+      "type": "array",
+      "description": "List of experience rewards",
+      "items": {
+        "type": "object",
+        "required": ["experience_type", "amount"],
+        "properties": {
+          "experience_type": {
+            "type": "string",
+            "description": "Type of experience awarded",
+            "enum": ["character", "skill", "profession"]
+          },
+          "amount": {
+            "type": "integer",
+            "description": "Amount of experience to award",
+            "minimum": 1,
+            "maximum": 999999999
+          }
+        },
+        "additionalProperties": false
+      },
+      "maxItems": 3
+    },
+    "reward_type": {
+      "type": "string",
+      "description": "Classification of reward for organization",
+      "enum": ["loot", "quest", "crafting", "vendor", "achievement"],
+      "default": "loot"
+    },
+    "tags": {
+      "type": "array",
+      "description": "Optional tags for categorization",
+      "items": { "type": "string", "maxLength": 32 },
+      "maxItems": 10
+    }
+  },
+  "anyOf": [
+    { "required": ["items"] },
+    { "required": ["currency"] },
+    { "required": ["experience"] }
+  ],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "id": "reward_gold_chest",
+      "name": "Gold Chest",
+      "description": "A chest containing gold coins.",
+      "items": [],
+      "currency": [
+        { "currency_type": "gold", "amount": 100 }
+      ]
+    },
+    {
+      "id": "reward_heal_potion_drop",
+      "name": "Healing Potion Drop",
+      "description": "Drops a healing potion.",
+      "items": [
+        { "item": "item_health_potion_small", "quantity": 1 }
+      ],
+      "reward_type": "loot"
+    },
+    {
+      "id": "reward_level_up_bonus",
+      "name": "Level Up Bonus",
+      "description": "Experience and currency for leveling up.",
+      "currency": [
+        { "currency_type": "gold", "amount": 500 }
+      ],
+      "experience": [
+        { "experience_type": "character", "amount": 1000 }
+      ],
+      "reward_type": "achievement"
+    }
+  ]
+}

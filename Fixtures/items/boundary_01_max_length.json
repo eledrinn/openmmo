@@ -1,0 +1,7 @@
+{
+  "id": "item_boundary_max_length_name",
+  "name": "This is a very long name that reaches exactly one hundred characters for boundary testing purposes",
+  "description": "This description must be exactly five hundred characters in total length to properly test the boundary condition. Every single character counts including spaces and punctuation marks. We need to fill this description with enough text to reach precisely five hundred characters without going over the limit. The schema defines maxLength as five hundred so this should be valid. Testing boundary conditions is important for validation. End of description here now.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "item_type": "material",
+  "rarity": "common"
+}

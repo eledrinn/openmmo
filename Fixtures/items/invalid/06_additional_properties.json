@@ -1,0 +1,6 @@
+{
+  "id": "item_extra_property",
+  "name": "Item With Extra Property",
+  "item_type": "material",
+  "custom_field": "not_allowed"
+}

@@ -1,0 +1,79 @@
+# OpenClaw / Development Artifacts
+.openclaw/
+.pi/
+.openclaw-cache/
+
+# OpenClaw Workspace State
+workspace-state.json
+HEARTBEAT.md
+IDENTITY.md
+SOUL.md
+TOOLS.md
+USER.md
+
+# Internal Operational Files (OpenClaw-specific)
+AGENTS.md
+BOOTSTRAP.md
+
+# Discord/Channel Config (Internal Only)
+discord/
+Routing/CHANNEL_MAP.md
+
+# Agent Charters (Internal Operational)
+Agents/
+
+# Playbooks (Internal Process)
+Playbooks/
+
+# Internal Monitoring Logs
+Monitoring/
+Planning/W1-EXEC-001-log.md
+Planning/approvals/
+
+# Templates (Internal)
+Templates/TASK_TEMPLATE.md
+Templates/REVIEW_TEMPLATE.md
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Testing
+*.tmp
+*.temp
+coverage/
+.nyc_output/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Build artifacts
+dist/
+build/
+*.tgz
+*.tar.gz
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Runtime
+*.pid
+*.seed
+*.pid.lock

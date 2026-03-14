@@ -1,0 +1,11 @@
+{
+  "id": "reward_gold_large",
+  "name": "Large Gold Chest",
+  "description": "A heavy chest filled with gold coins.",
+  "currency": [
+    { "currency_type": "gold", "amount": 500 },
+    { "currency_type": "premium", "amount": 5 }
+  ],
+  "reward_type": "loot",
+  "tags": ["gold", "large", "premium"]
+}
