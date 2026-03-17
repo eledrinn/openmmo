@@ -42,6 +42,26 @@
 
 ---
 
+## Wave 1.5 Initiation (March 16, 2026)
+
+### Plan Approval
+- `W1.5-PLAN-001.md` approved with revisions
+- Execution order enforced (Gap Audit → AJV decision → Implementation)
+
+### Gap Audit (W1.5-T001)
+- Completed and accepted as canonical defect list
+- **Gaps:**
+  - **B1:** Recursive discovery missing (Layer 2)
+  - **B2:** Reference validation not integrated by default (Layer 2)
+  - **B3:** Conditional validation edge cases untested (Layer 1)
+  - **B4:** CLI/validator behavior misalignment (Layer 1+2)
+  - **B5:** Docs/examples/behavior drift (Docs)
+- AJV migration path confirmed (Layer 1 separation from Layer 2)
+- New risks logged: fixture organization, reference validation performance, CLI exit code consistency
+- Next task: validator architecture decision/migration design (must address B3 status explicitly)
+
+---
+
 ## Artifacts Published
 
 ### Schemas (4)
@@ -76,45 +96,3 @@
 | Validator | 28 | ✅ All passing |
 | CLI | 22 | ✅ All passing |
 | **Total** | **50** | **✅ 50/50** |
-
----
-
-## GitHub Repository
-
-- **URL:** https://github.com/eledrinn/openmmo
-- **Published:** March 14, 2026
-- **Release:** Wave 1 (Initial)
-- **Status:** Public, ready for use
-
----
-
-## Known Caveats
-
-1. **ID Format Validation:** `iron_sword` pattern is syntactically valid but semantically ambiguous — this is documented behavior per T003a scope (format validation only)
-2. **Circular Reference Detection:** Requires full project context; individual file validation won't detect circulars
-3. **Reference Existence:** Validation of reference targets requires full fixture set
-
----
-
-## Wave 2 Recommended Entry Points
-
-When ready to begin Wave 2, recommended starting tasks:
-1. Quest system foundation (quest schema, objectives)
-2. Vendor/shop foundation (vendor schema, inventory)
-3. Crafting foundation (recipe schema, stations)
-4. Tooling enhancements (VS Code extension, additional CLI commands)
-5. Integration preparations (Godot plugin architecture)
-
----
-
-## Human Preferences
-
-- Preferred sequence for Wave 1 execution: T001 → T002 → T003a → T003b → T004 → T005 → T006 → T007 → T008 → T009
-- Required verification passes before task completion
-- Strict scope containment enforced throughout
-- Early QA involvement from Phase 2
-
----
-
-*Last Updated: March 14, 2026*  
-*Next Review: Wave 2 Planning*
