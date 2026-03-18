@@ -7,5 +7,8 @@
     "test": "node tests/validator.spec.js"
   },
   "keywords": ["openmmo", "validator", "schema"],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^8.12.0"
+  }
 }

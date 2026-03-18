@@ -172,16 +172,16 @@ test('Invalid rarity enum', () => {
   assertTrue(errors.length > 0, 'Should have errors');
 });
 
-test('Stackable item with max_stack_size = 1 is valid', () => {
+test('Stackable item with max_stack_size = 1 is invalid', () => {
   const item = {
     id: 'item_test',
     name: 'Test',
     item_type: 'material',
     stackable: true,
-    max_stack_size: 1
+    max_stack_size: 1  // Schema requires minimum: 2 for stackable
   };
   const errors = validateValue(item, loadSchema('item'), '');
-  assertEqual(errors.length, 0, 'Should have no errors');
+  assertTrue(errors.length > 0, 'Should have errors (max_stack_size must be >= 2 for stackable)');
 });
 
 test('Additional properties not allowed', () => {
